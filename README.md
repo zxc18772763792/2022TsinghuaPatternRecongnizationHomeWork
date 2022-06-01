@@ -27,3 +27,5 @@ python 绝对路径\Codes\main.py 0.1 0.7 0.2 0.1
 ```
 训练和分析结束后，会得到名为“Indicator_XXX.xlsx”的Excel表格，测试集的预测结果Labels_pred、预测分数Socres_pred与Precision、Recall、PR—AUC、F1分数
 均在Excel中存储
+### 4.各部分代码说明
+#### 1.
