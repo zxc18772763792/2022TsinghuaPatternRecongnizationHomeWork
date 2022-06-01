@@ -33,3 +33,9 @@ python 绝对路径\Codes\main.py 0.1 0.7 0.2 0.1
 transformer_SMILES_origin函数训练单个DislitBert分类器，transfomer_bagging函数用Bagging的方式集成训练好的DislitBert弱分类器。
 #### 3.ECFP_only.py
 feature_slection函数根据信息增益选择指定个特征对ECFP特征进行降维。my_forests_ECFP函数利用sklearn包训练随机森林（RF）弱分类器并进行Bagging集成。
+#### 4.Images_only.py
+my_svm_Images函数对Image特征进行Z-score标准化后利用PCA计数降维到指定的维度，再利用sklearn包训SVM弱分类器并进行Bagging集成。
+#### 5.CNN_Images.py
+定义了网络结构CNN类，构建数据集myDataset类，myCNN_Images函数训练单个的CNN弱分类器，CNNs_bagging训练CNN分类器并进行Bagging集成。
+#### 6.Analysis.py
+analysis_transformers、analysis_RFs、analysis_SVMs、analysis_CNNs、analysis_Final分别计算了几个模型单独在测试集上的准确率（Accuracy）、精确率（Precision）、召回率（Recall）、精确率-召回率曲线下的面积（PR-AUC）和F1分数（F1 Score），返回结果为一个字典Indicator，包含了几个模型在测试集上的表现。
