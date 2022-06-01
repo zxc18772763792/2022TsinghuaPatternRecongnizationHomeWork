@@ -30,7 +30,7 @@ python 绝对路径\Codes\main.py 0.1 0.7 0.2 0.1
 #### 1.ProcessData.py
 数据预处理，从"SMILES.npy"、"ECFP.npy"、"Image.npy"、"Label.npy"中读取数据，并按照正负样本的比例从中选择total_ratio的样本构建mini数据集，mini数据集按照train_ratio:val_ratio:test_ratio划分为训练集、验证集和测试集。后续所有的训练和测试均在mini数据集上完成。为了保证训练模型的一致性，上传的代码中数据的抽取按照索引从小到大按顺序抽取，如需实用请调整为随机采样。该函数返回一个字典Data。
 #### 2.SMILES_only.py
-transformer_SMILES_origin函数训练单个DislitBert分类器，transfomer_bagging函数用Bagging的方式集成训练好的DislitBert弱分类器。
+transformer_SMILES_origin函数训练单个DislitBert分类器，transfomer_bagging函数用Bagging的方式集成训练好的DislitBert弱分类器。DislitBert预训练头基于HuggingFace的相关工作。
 #### 3.ECFP_only.py
 feature_slection函数根据信息增益选择指定个特征对ECFP特征进行降维。my_forests_ECFP函数利用sklearn包训练随机森林（RF）弱分类器并进行Bagging集成。
 #### 4.Images_only.py
@@ -39,3 +39,7 @@ my_svm_Images函数对Image特征进行Z-score标准化后利用PCA计数降维�
 定义了网络结构CNN类，构建数据集myDataset类，myCNN_Images函数训练单个的CNN弱分类器，CNNs_bagging训练CNN分类器并进行Bagging集成。
 #### 6.Analysis.py
 analysis_transformers、analysis_RFs、analysis_SVMs、analysis_CNNs、analysis_Final分别计算了几个模型单独在测试集上的准确率（Accuracy）、精确率（Precision）、召回率（Recall）、精确率-召回率曲线下的面积（PR-AUC）和F1分数（F1 Score），返回结果为一个字典Indicator，包含了几个模型在测试集上的表现。
+#### 7.SingleTest.py
+命令行输入一个想要测试的样本在样本集中的索引，如123，返回集成前最好的单个DislitBert分类器、RF分类器、SVM分类器、CNN分类器的分类结果和相应的预测分数。
+#### 8.main.py
+训练以上模型并将模型在测试集上的表现写入"Indicator_XXX.xlsx"的Excel表格中。
