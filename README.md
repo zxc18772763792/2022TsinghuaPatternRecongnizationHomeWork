@@ -2,6 +2,12 @@
 2022年春季学期清华大学模式识别（张长水）课程大作业-有机小分子HIV抑制效果预测
 ## Codes
 ### 1.环境配置
+#### 使用conda配置。
+将environment.yaml文件放置到虚拟环境安装位置下，一般为（C:\Users\Username\）
+```
+conda env create -f environment.yaml
+```
+#### 使用pip配置。
 创建虚拟环境PRproject2，并激活
 ```
 conda create --name PRproject2 python=3.9
