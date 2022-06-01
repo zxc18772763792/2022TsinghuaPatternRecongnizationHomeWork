@@ -11,3 +11,8 @@ conda activate PRproject2
 pip download -r requirements.txt
 
 2.运行单个文件的测试
+在命令行输入：
+```
+python 绝对路径\Codes\SingleTest.py Id_test
+```
+Id_test为想要预测的样本在总样本集中的索引，如123
