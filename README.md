@@ -1,6 +1,6 @@
 # -有机小分子HIV抑制效果预测-
 2022年春季学期清华大学模式识别（张长水）课程大作业-有机小分子HIV抑制效果预测
-## Code
+## Codes
 ### 1.环境配置
 创建虚拟环境PRproject2，并激活
 ```
@@ -20,6 +20,7 @@ pip download -r requirements.txt
 python 绝对路径\Codes\SingleTest.py Id_test
 ```
 Id_test为想要预测的样本在总样本集中的索引，如123，测试结果如下：<br>
+<br>
 ![singleTest](https://user-images.githubusercontent.com/54254118/171396429-95dc7bf9-a66b-47bf-afe4-9c336ad8bb28.png)
 
 ### 3.训练并得到相关的分析结果
@@ -32,8 +33,10 @@ python 绝对路径\Codes\main.py total_ratio train_ratio val_ratio test_ratio
 python 绝对路径\Codes\main.py 0.1 0.7 0.2 0.1
 ```
 训练和分析结束后，会得到名为“Indicator_XXX.xlsx”的Excel表格以及训练好的模型，测试集的预测结果Labels_pred、预测分数Socres_pred与Precision、Recall、PR—AUC、F1分数均在Excel中存储。<br>
+<br>
 ![Indicator1](https://user-images.githubusercontent.com/54254118/171396985-d6d82e48-5cc6-4829-a6dd-daa04a5b29a4.png)
 每个Excel包含4张表：“Labels_pred”、“Scores_pred”、“Indicators”、“Ensemble Confusion Matrix”：<br>
+<br>
 ![Indicator2](https://user-images.githubusercontent.com/54254118/171397790-b1df608b-4c44-48ed-913f-0d9d6bd42469.png)
 
 ### 4.各部分代码说明
@@ -53,3 +56,6 @@ analysis_transformers、analysis_RFs、analysis_SVMs、analysis_CNNs、analysis_
 命令行输入一个想要测试的样本在样本集中的索引，如123，返回集成前最好的单个DislitBert分类器、RF分类器、SVM分类器、CNN分类器的分类结果和相应的预测分数。
 #### 8.main.py
 训练以上模型并将模型在测试集上的表现写入"Indicator_XXX.xlsx"的Excel表格中。
+
+## Report
+见word文档Report.docx
