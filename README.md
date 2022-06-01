@@ -13,13 +13,13 @@ pip download -r requirements.txt
 ```
 （PS.经过试验以上命令是可行的，如果配置不成功，请手动安装pytorch、numpy、matplotlib、transformer、sklearn、joblib、os、xlsxwriter、sys几个包）
 ### 2.数据和模型下载
-从清华云盘https://cloud.tsinghua.edu.cn/d/57a1022e76524ef391d3/下载所有文件夹和原始特征文件到codes文件夹
+从清华云盘https://cloud.tsinghua.edu.cn/d/57a1022e76524ef391d3/  并下载所有文件夹和原始特征文件到codes文件夹
 ### 3.Ensemble前最好的分类器单个样本的测试
 在conda命令行输入：
 ```
 python 绝对路径\Codes\SingleTest.py Id_test
 ```
-Id_test为想要预测的样本在总样本集中的索引，如123，测试结果如下：
+Id_test为想要预测的样本在总样本集中的索引，如123，测试结果如下：<br>
 ![singleTest](https://user-images.githubusercontent.com/54254118/171396429-95dc7bf9-a66b-47bf-afe4-9c336ad8bb28.png)
 
 ### 3.训练并得到相关的分析结果
@@ -31,9 +31,9 @@ python 绝对路径\Codes\main.py total_ratio train_ratio val_ratio test_ratio
 ```
 python 绝对路径\Codes\main.py 0.1 0.7 0.2 0.1
 ```
-训练和分析结束后，会得到名为“Indicator_XXX.xlsx”的Excel表格以及训练好的模型，测试集的预测结果Labels_pred、预测分数Socres_pred与Precision、Recall、PR—AUC、F1分数均在Excel中存储。
+训练和分析结束后，会得到名为“Indicator_XXX.xlsx”的Excel表格以及训练好的模型，测试集的预测结果Labels_pred、预测分数Socres_pred与Precision、Recall、PR—AUC、F1分数均在Excel中存储。<br>
 ![Indicator1](https://user-images.githubusercontent.com/54254118/171396985-d6d82e48-5cc6-4829-a6dd-daa04a5b29a4.png)
-每个Excel包含4张表：“Labels_pred”、“Scores_pred”、“Indicators”、“Ensemble Confusion Matrix”：
+每个Excel包含4张表：“Labels_pred”、“Scores_pred”、“Indicators”、“Ensemble Confusion Matrix”：<br>
 ![Indicator2](https://user-images.githubusercontent.com/54254118/171397790-b1df608b-4c44-48ed-913f-0d9d6bd42469.png)
 
 ### 4.各部分代码说明
