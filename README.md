@@ -9,8 +9,10 @@ conda activate PRproject2
 ```
 将requirements.txt文件放到虚拟环境下，一般为（C:\Users\Username\）
 pip download -r requirements.txt
-
-### 2.Ensemble前最好的分类器单个样本的测试
+（PS.经过试验以上命令是可行的，如果配置不成功，请手动安装pytorch、numpy、matplotlib、transformer、sklearn、joblib、os、xlsxwriter、sys几个包）
+### 2.数据和模型下载
+从清华云盘https://cloud.tsinghua.edu.cn/d/57a1022e76524ef391d3/下载所有文件夹和原始特征文件到codes文件夹
+### 3.Ensemble前最好的分类器单个样本的测试
 在conda命令行输入：
 ```
 python 绝对路径\Codes\SingleTest.py Id_test
