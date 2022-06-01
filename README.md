@@ -15,7 +15,9 @@ pip download -r requirements.txt
 ```
 python 绝对路径\Codes\SingleTest.py Id_test
 ```
-Id_test为想要预测的样本在总样本集中的索引，如123
+Id_test为想要预测的样本在总样本集中的索引，如123，测试结果如下：
+![singleTest](https://user-images.githubusercontent.com/54254118/171396429-95dc7bf9-a66b-47bf-afe4-9c336ad8bb28.png)
+
 ### 3.训练并得到相关的分析结果
 在conda命令行输入：
 ```
